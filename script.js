@@ -13,3 +13,13 @@ export function aufgabe01(args) {
   }
   return result.join("")
 }
+export function aufgabe02 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    let currentElement = input[i]
+    currentElement = currentElement.toUpperCase()
+    result.push(currentElement) 
+  }
+  return result.join("")
+}
