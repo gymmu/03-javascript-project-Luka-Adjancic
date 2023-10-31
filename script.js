@@ -4,7 +4,12 @@ export function aufgabe01(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    if(currentElement === "e" || currentElement === "E") {
+
+    }
+    else {
     result.push(currentElement)
+    }
   }
   return result.join("")
 }
