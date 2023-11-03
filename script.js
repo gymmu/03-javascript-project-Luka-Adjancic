@@ -23,3 +23,17 @@ export function aufgabe02 (args) {
   }
   return result.join("")
 }
+export function aufgabe03 (args) {
+  const input = args
+  let result = []
+
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === "e" || currentElement === "E") {
+      count++
+    }
+  }
+  return count
+}
