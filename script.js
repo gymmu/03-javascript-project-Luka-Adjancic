@@ -25,15 +25,31 @@ export function aufgabe02 (args) {
 }
 export function aufgabe03 (args) {
   const input = args
-  let result = []
+  const result = []
 
-  let count = 0
+  let countE = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if(currentElement === "e" || currentElement === "E") {
-      count++
+      countE++
     }
   }
-  return count
+  return countE
+}
+export function aufgabe04 (args) {
+  let input = args
+  const result = []
+
+  let countW = 1
+
+  input = input.replace(/\s\s+/g, ' ')
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+    countW++
+    }
+  }
+  return countW
 }
