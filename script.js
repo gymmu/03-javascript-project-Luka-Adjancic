@@ -68,3 +68,110 @@ export function aufgabe05 (args) {
   }
   return false
 }
+  
+export function aufgabe06 (args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    let ascii = currentElement.charCodeAt(0)
+    if (0 <= ascii && ascii < 32) {
+    return true
+    }
+    else if (32 < ascii && ascii < 48) {
+      return true
+    }
+    else if (57 < ascii && ascii < 65) {
+      return true
+    }
+    else if (90 < ascii && ascii < 97) {
+      return true
+    }
+    else if (122 < ascii && ascii <= 127) {
+      return true
+    }
+  }
+  return false
+}
+  
+
+
+
+
+export function aufgabe09 (args) {
+  const input = args
+  const result = []
+
+  let len = 0
+
+  for (let i = 0; i < input.length; i++) {
+   len++
+  }
+  if (len === 6) {
+  return true
+  }
+  else {
+    return false
+  }
+}
+export function aufgabe10 (args) {
+  const input = args
+  
+  if (input.length !== 7) {
+    return false
+  }
+  if (input[0] !== "#") {
+    return false
+  }
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    let ascii = currentElement.charCodeAt(0)
+
+    if (48 <= ascii && ascii <= 57) {
+      //Ziffer
+    } else if(65 <= ascii && ascii <= 70) {
+      //A-F
+    }
+    else {
+      return false
+    }
+  }
+  return true
+}
+export function aufgabe11 (args) {
+  const input = args
+  const result = []
+  
+  if (input.length > 1) {
+    //functionguard, he who guards the function
+    return null
+  }
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    return currentElement.charCode(0)
+  }
+  return null
+}
+export function aufgabe12 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+  return -1
+}
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  
+ }
+  return 
+}
