@@ -108,6 +108,21 @@ export function aufgabe07 (args) {
   }
   return false
 }
+export function aufgabe08 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === "e") {
+      result.push("3")
+    }
+    else {
+    result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
   
 export function aufgabe09 (args) {
   const input = args
@@ -126,24 +141,18 @@ export function aufgabe09 (args) {
   }
 }
 export function aufgabe10 (args) {
-  const input = args
-  
-  if (input.length !== 7) {
-    return false
-  }
-  if (input[0] !== "#") {
+  let input = args.toUpperCase()
+
+  if (input.length !== 7 ||input[0] !== "#") {
     return false
   }
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     let ascii = currentElement.charCodeAt(0)
 
-    if (48 <= ascii && ascii <= 57) {
-      //Ziffer
-    } else if(65 <= ascii && ascii <= 70) {
-      //A-F
-    }
-    else {
+    if (48 <= ascii && ascii <= 57 || 65 <= ascii && ascii <= 70) {
+      //Ziffer oder A-F
+    } else {
       return false
     }
   }
@@ -160,7 +169,7 @@ export function aufgabe11 (args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    return currentElement.charCode(0)
+    return currentElement.charCodeAt(0)
   }
   return null
 }
