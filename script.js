@@ -141,17 +141,17 @@ export function aufgabe09 (args) {
   }
 }
 export function aufgabe10 (args) {
-  let input = args.toUpperCase()
+  const input = args
 
   if (input.length !== 7 ||input[0] !== "#") {
     return false
   }
-  for (let i = 0; i < input.length; i++) {
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
-    let ascii = currentElement.charCodeAt(0)
+    const ascii = currentElement.charCodeAt(0)
 
-    if (48 <= ascii && ascii <= 57 || 65 <= ascii && ascii <= 70) {
-      //Ziffer oder A-F
+    if (48 <= ascii && ascii <= 57 || 65 <= ascii && ascii <= 70 || 97 <= ascii && ascii <= 102) {
+      //Ziffer oder A-F oder a-f
     } else {
       return false
     }
@@ -163,7 +163,7 @@ export function aufgabe11 (args) {
   const result = []
   
   if (input.length > 1) {
-    //functionguard, he who guards the function
+    //functionguard, he who guards se function
     return null
   }
 
@@ -187,10 +187,11 @@ export function aufgabe12 (args) {
 export function aufgabe13 (args) {
   const input = args
   const result = []
-
-  for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-  
- }
-  return 
+  for (let i = input.length; i >= 0; i--) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+  return -1
 }
