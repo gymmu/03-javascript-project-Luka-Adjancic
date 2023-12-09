@@ -195,3 +195,25 @@ export function aufgabe13 (args) {
   }
   return -1
 }
+export function aufgabe14 (args) {
+  const input = args;
+  let countE = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    if (currentElement === "e") {
+      countE++;
+    }
+    if (countE === 3) {
+      return i
+    }
+  }
+  
+  if (countE > 2) {
+    if (countE === input.length) {
+      return 2;
+    }
+  } else {
+  return -1;
+  }
+}
