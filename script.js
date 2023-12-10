@@ -220,7 +220,7 @@ export function aufgabe14 (args) {
 export function aufgabe15 (args) {
   const input = args
   const result = []
-  
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === " ") {
@@ -232,4 +232,26 @@ export function aufgabe15 (args) {
   }
   
   return result.join("")
+}
+export function aufgabe16 (args) {
+  const input = args.split()
+  const result = []
+  let switch1 = true
+  const list1 = [""]
+  const list2 = [""]
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      switch1 = false
+    }
+    else {
+      if (switch1 === true) {
+        list1.push(input[i])
+      } else if (switch1 === false) {
+        list2.push(input[i])
+      }
+    }
+  }
+  return list1.join(""), list2.join("")
 }
