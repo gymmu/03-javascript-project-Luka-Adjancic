@@ -238,6 +238,8 @@ export function aufgabe16 (args) {
   const result = []
   let count$ = 0
   
+  //ersetzt alle $ durch ,
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   if (count$ === 0 && currentElement === "$" && i+2 > input.length) {
