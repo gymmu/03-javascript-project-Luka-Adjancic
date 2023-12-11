@@ -255,5 +255,32 @@ export function aufgabe16 (args) {
   }
  
 }
+
 return result.join("")
+}
+export function aufgabe17 (args) {
+  const input = args
+  const result = []
+  let countDot = 0
+  let list1 = []
+  let list2 = []
+  let list3 = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      countDot++
+    }
+    else if(countDot === 0) {
+      list1.push(currentElement)
+    }
+    else if(countDot === 1) {
+      list2.push(currentElement)
+    }
+    else if(countDot === 2) {
+      list3.push(currentElement)
+    }
+      
+  }
+  return list1.join("")  + list2.join("") + list3.join("")
 }
