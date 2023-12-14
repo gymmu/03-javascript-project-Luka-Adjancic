@@ -357,23 +357,29 @@ export function aufgabe22 (args) {
   }
   return result.join("")
 }
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  let firstElement = input[0]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //wenn die postion 0(erste position) ist, wird das Element angehängt
+    if (i === 0) {
+      result.push(currentElement)
+    }
+    //wenn das die letzte Position ist, wird das erste Element nach diesem Element angehängt
+    if (i === input.length - 1) {
+      result.push(currentElement)
+      result.push(firstElement)
+    }
+    else {
+      result.push(currentElement)
+    }
+  }
+  
+  return result.join("")
+}
 export function aufgabe24 (args) {
   const input = args
   const result = []
