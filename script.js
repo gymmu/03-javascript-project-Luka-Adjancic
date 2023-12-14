@@ -401,6 +401,42 @@ export function aufgabe24 (args) {
 
   return result.join("")
 }
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  if(input.length <= 1) {
+    return ""
+  }
+
+  // diser if prüft ob die Zahl einen Rest hat, wenn man sie durch zwei rechnet 
+  if(input.length % 2 === 0) {
+   let deleteElement1 = input.length / 2 - 1
+   let deleteElement2 = input.length / 2
+   for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === input[deleteElement1] || currentElement === input[deleteElement2]) {
+
+    }
+    else {
+      result.push(currentElement)
+    }
+   }
+  }
+  else {
+    //Math.floor rundet immer auf die nächst kleinere ganze Zahl
+    let deleteElement1 = Math.floor(input.length / 2)
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if(currentElement === input[deleteElement1]) {
+      
+    }
+    else {
+      result.push(currentElement)
+    }
+  }
+}
+  return result.join("")
+}
 export function aufgabe26 (args) {
   let input = args
   const result = []
