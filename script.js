@@ -315,6 +315,19 @@ export function aufgabe19 (args) {
   }
   return result.join("")
 }
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  let countDot = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //wenn nach einem kein Leerzeichen folgt, wird false zurückgegeben
+    if (currentElement === "." && input[i+1] !== " ") {
+      return false
+    }
+  }
+  return true
+}
 
 
 
