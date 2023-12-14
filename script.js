@@ -423,7 +423,7 @@ export function aufgabe25 (args) {
    }
   }
   else {
-    //Math.floor rundet immer auf die nächst kleinere ganze Zahl
+    //Math.floor rundet Zahlen mit Kommma ab
     let deleteElement1 = Math.floor(input.length / 2)
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
@@ -459,4 +459,23 @@ export function aufgabe26 (args) {
   }
 input = splitInput.join("")
 return input*/
+}
+export function aufgabe27 (args) {
+  const input = args
+  const result = []
+
+  if (input.length === 0) {
+    return false
+  }
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) {
+    
+    }
+    else {
+      return false
+    }
+  }
+  return true
 }
