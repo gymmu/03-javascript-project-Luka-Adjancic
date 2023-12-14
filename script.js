@@ -328,6 +328,16 @@ export function aufgabe20 (args) {
   }
   return true
 }
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //die länge der eingabe wird mit der jetztigen position und eins(weil pos. bei 0 anfängt) subtrahiert
+    result.push(input[input.length - i - 1])
+  }
+  return result.join("")
+}
 
 
 
