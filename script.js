@@ -284,6 +284,43 @@ export function aufgabe17 (args) {
   }
   return list1.join("") + list2.join("") + list3.join("")
 }
+export function aufgabe18 (args) {
+  const input = args
+  let result = ""
+  let age = []
+  let name = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) {
+      age.push(currentElement)
+    }
+    else if (currentElement.charCodeAt(0) >= 97 && currentElement.charCodeAt(0) <= 122 || currentElement.charCodeAt(0) >= 65 && currentElement.charCodeAt(0) <= 90) {
+      name.push(currentElement)
+    }
+    else {
+
+    }
+  }
+  result = `Sie heissen ${name.join("")} und sind ${age.join("")} Jahre alt.`
+  /*result = "Sie heissen " + name.join("") + " und sind " + age.join("") + " Jahre alt."*/
+  return result
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export function aufgabe24 (args) {
   const input = args
   const result = []
