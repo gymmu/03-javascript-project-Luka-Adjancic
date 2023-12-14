@@ -282,5 +282,49 @@ export function aufgabe17 (args) {
     }
       
   }
-  return list1.join("")  + list2.join("") + list3.join("")
+  return list1.join("") + list2.join("") + list3.join("")
+}
+export function aufgabe24 (args) {
+  const input = args
+  const result = []
+
+  if (input.length === 1) {
+    return input
+  }
+
+  const firstElement = input[0]
+  const lastElement = input[input.length-1]
+
+  result.push(lastElement)
+
+  for (let i = 1; i < input.length - 1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  result.push(firstElement)
+
+  return result.join("")
+}
+export function aufgabe26 (args) {
+  let input = args
+  const result = []
+  let splitInput = input.split("")
+  
+  let sortedInput = splitInput.sort()
+  input = sortedInput.join("")
+  return input
+
+  //bubble sort mit ASCII ist auch möglich das erste geht etwas schneller
+  /*for (let i = 0; i < splitInput.length - 1; i++) {
+    const currentElement = splitInput[i]
+    const nextElement = splitInput[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    const tmp = splitInput[i + 1]
+    splitInput[i + 1] = splitInput[i]
+    splitInput[i] = tmp
+    i = -1
+    }
+  }
+input = splitInput.join("")
+return input*/
 }
