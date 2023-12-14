@@ -305,6 +305,17 @@ export function aufgabe18 (args) {
   /*result = "Sie heissen " + name.join("") + " und sind " + age.join("") + " Jahre alt."*/
   return result
 }
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
 
 
 
