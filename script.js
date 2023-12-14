@@ -338,6 +338,25 @@ export function aufgabe21 (args) {
   }
   return result.join("")
 }
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  let condition = false
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //wenn "k" gefunden wird, wird die Bedingung auf wahr gesetzt
+    if (currentElement === "k") {
+      condition = true
+    }
+    //so lange die Bedingung nicht wahr ist, wird _ eingefügen
+    if (condition === true) {
+      result.push(currentElement)
+    } else {
+      result.push("_")
+    }
+  }
+  return result.join("")
+}
 
 
 
