@@ -479,3 +479,33 @@ export function aufgabe27 (args) {
   }
   return true
 }
+export function aufgabe28 (args) {
+  const input = args
+  let result = []
+  let condition = false
+  let number1 = []
+  let number2 = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "+") {
+     return null
+    }
+  }
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      condition = true
+    }
+    if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57 && condition === false) {
+      number1.push(currentElement)  
+    }
+    else if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57 && condition === true) {
+      number2.push(currentElement)
+    }
+  }
+  //das plus vor der variabel wandelt das array in eine Zahl um
+  result = +number1.join("") + +number2.join("")
+  return result
+}
