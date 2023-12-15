@@ -289,6 +289,7 @@ export function aufgabe18 (args) {
   let result = ""
   let age = []
   let name = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if(currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) {
@@ -301,9 +302,21 @@ export function aufgabe18 (args) {
 
     }
   }
-  /*result = `Sie heissen ${name.join("")} und sind ${age.join("")} Jahre alt`*/
-  result = "Sie heissen " + name.join("") + " und sind " + +age.join("") + " Jahre alt"
-  return result
+  name = name.join("")
+  age = age.join("")
+
+  if (age.length === 0) {
+    return `Sie heissen ${name} und sind Jahre alt`
+  }
+  else if (name.length === 0) {
+    return `Sie heissen und sind ${age} Jahre alt`
+  }
+  else if(name.length === 0 && age.length === 0) {
+    return `Sie heissen und sind Jahre alt`
+  }
+  else {
+    return `Sie heissen ${name} und sind ${age} Jahre alt`
+  }
 }
 export function aufgabe19 (args) {
   const input = args
