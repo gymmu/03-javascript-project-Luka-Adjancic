@@ -301,8 +301,8 @@ export function aufgabe18 (args) {
 
     }
   }
-  result = `Sie heissen ${name.join("")} und sind ${age.join("")} Jahre alt.`
-  /*result = "Sie heissen " + name.join("") + " und sind " + age.join("") + " Jahre alt."*/
+  /*result = `Sie heissen ${name.join("")} und sind ${age.join("")} Jahre alt`*/
+  result = "Sie heissen " + name.join("") + " und sind " + +age.join("") + " Jahre alt"
   return result
 }
 export function aufgabe19 (args) {
@@ -444,7 +444,6 @@ export function aufgabe26 (args) {
   
   let sortedInput = splitInput.sort()
   input = sortedInput.join("")
-  return input
 
   //bubble sort mit ASCII ist auch möglich das erste geht etwas schneller
   /*for (let i = 0; i < splitInput.length - 1; i++) {
@@ -457,8 +456,9 @@ export function aufgabe26 (args) {
     i = -1
     }
   }
-input = splitInput.join("")
-return input*/
+input = splitInput.join("")*/
+
+return input
 }
 export function aufgabe27 (args) {
   const input = args
@@ -508,4 +508,29 @@ export function aufgabe28 (args) {
   //das plus vor der variabel wandelt das array in eine Zahl um
   result = +number1.join("") + +number2.join("")
   return result
+}
+export function toNextPage () {
+  window.location.href = "sort.html"
+}
+export function toLastPage () {
+ window.location.href = "index.html"
+}
+export function bubbleSort (args) {
+  let input = args
+  const result = []
+
+  let splitInput = input.split("")
+
+  for (let i = 0; i < splitInput.length - 1; i++) {
+    const currentElement = splitInput[i]
+    const nextElement = splitInput[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    const tmp = splitInput[i + 1]
+    splitInput[i + 1] = splitInput[i]
+    splitInput[i] = tmp
+    i = -1
+    }
+  }
+  input = splitInput.join("")
+  return input
 }
